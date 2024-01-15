@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .animated {
+      animation: fadeIn 1s;
+      /* background: linear-gradient(to right, #2b6cb0, #4a5568); */
+    }
+
+    .corner-stripes {
+      position: absolute;
+      top: 0;
+      right: -100px;
+      width: 50px;
+      height: 100%;
+      background: linear-gradient(to bottom, #000000, #000000);
+      transform: skewX(-45deg);
+      transform-origin: right;
+      animation: wave 22s linear infinite;
+    }
+
+    .corner-stripes2 {
+        position: absolute;
+        top: 0;
+        right: -300px;
+        width: 200px;
+        height: 100%;
+        background: linear-gradient(to bottom, #e9edc9, #e9edc9);
+        transform: skewX(-45deg);
+        transform-origin: right;
+      }
+
+      
+      @keyframes wave {
+        0% {
+          transform: skewX(-45deg) translateX(0);
+        }
+        50% {
+          transform: skewX(-45deg) translateX(50px);
+        }
+        100% {
+          transform: skewX(-45deg) translateX(0);
+        }
+      }
+
+    html, body {
+      overflow: hidden;
+    }
+
+    .bg-white {
+        overflow-x: hidden;
+        background-color: #ccd5ae;
+        border: 6px solid black;
+        border-radius: 27px;
+
+      }
+
+      .close {
+        margin-left: 3vh;
+        margin-top: 3vh;
+        border-radius: 5px;
+        padding: 10px;
+        background-color: #ef233c;
+        color: white;
+      }
+
+
+  </style>
+</head>
+<body>
+  <div class="min-h-screen" style="display: none;">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-2/3 lg:w-3/4 mx-auto h-screen md:h-auto relative">
+      <div class="corner-stripes"></div>
+      <div class="corner-stripes2"></div>
+      <h1 class="text-4xl font-bold mb-6 inline-block text-black p-3 rounded-lg font-slab animated">
+        <i id="header" class="fas fa-car-side"></i> VEHICLE RENTAL
+      </h1>
+    <div class="info-container">
+      <h5 class="text-white text-sm font-slab animated">Welcome to los santon vehicle rental, choose your fev vehicle from the menu. Terms & condition will be applied..</h5>
+    </div>
+      <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8 card-container">
+        <h2 class="sr-only">Cars</h2>
+        <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
+          <!-- Vehicle cards will be generated dynamically here -->
+        </div>
+      </div>
+      <button id="close" class="close">CLOSE MENU</button>
+      <div class="info3-container">
+        <div class="info3">BY - MAMBA OP 🔥</div>
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
