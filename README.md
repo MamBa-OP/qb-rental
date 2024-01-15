@@ -18,5 +18,10 @@ You can add more vehicles in the config and it's easy to change location.
 ["rentalpapers"]				 = {["name"] = "rentalpapers", 					["label"] = "Rental Papers", 			["weight"] = 0, 		["type"] = "item", 		["image"] = "rentalpapers.png", 		["unique"] = true, 		["useable"] = false, 	["shouldClose"] = false, 	["combinable"] = nil, 	["description"] = "Yea, this is my car i can prove it!"},
 ```
 
-
+FOR SUPPORT
+=========
 Discord: https://discord.gg/gCQx499JYY
+
+
+<p>Visitor count</p>
+  <img src="https://profile-counter.glitch.me/qb-rental-replace/count.svg" />
